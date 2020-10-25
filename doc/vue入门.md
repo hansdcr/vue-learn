@@ -1,5 +1,55 @@
 ### vue入门
 
+#### 1 项目初始化
+
+##### 1.1  [初始化vue-element-ui](http://www.youbaobao.xyz/admin-docs/guide/)
+
+```
+git clone https://github.com/PanJiaChen/vue-element-admin
+cd vue-element-admin
+npm i
+npm run dev
+```
+
+##### 1.2 精简项目
+
+- 删除 src/views 下的源码，保留：
+  - dashboard：首页
+  - error-page：异常页面
+  - login：登录
+  - redirect：重定向
+- 对 src/router/index 进行相应修改
+- 删除 src/router/modules 文件夹
+- 删除 src/vendor 文件夹
+
+##### 1.3 源码调试
+
+如果需要进行源码调试，需要修改 vue.config.js：
+
+```js
+config
+  // https://webpack.js.org/configuration/devtool/#development
+  .when(process.env.NODE_ENV === 'development',
+    config => config.devtool('cheap-source-map')
+  )
+```
+
+将 cheap-source-map 改为 source-map，如果希望提升构建速度可以改为 eval
+
+####  2 用户登陆
+
+##### 2.1 登陆流程图
+
+![image-20201025120508418](/Users/11091752/Library/Application Support/typora-user-images/image-20201025120508418.png) 
+
+
+
+
+
+
+
+
+
 #### 100 知识点
 
 ##### 100.1 实现动态路由
