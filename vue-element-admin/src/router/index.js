@@ -47,6 +47,54 @@ export const constantRoutes = [
       }
     ]
   },
+  {
+    path: '/todo',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/Todo/index'),
+        name: 'Todo',
+        meta: { title: 'Todo', icon: 'edit' }
+      }
+    ]
+  },
+  {
+    path: '/table',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/table/index'),
+        name: 'Table',
+        meta: { title: 'Table', icon: 'edit' }
+      }
+    ]
+  },
+  {
+    path: '/map',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/earth/index'),
+        name: 'Map',
+        meta: { title: 'Map', icon: 'edit' }
+      }
+    ]
+  },
+  {
+    path: '/dialog',
+    component: Layout,
+    children: [
+      {
+        path: '',
+        component: () => import('@/views/dialog/index'),
+        name: 'Dialog',
+        meta: { title: 'Dialog', icon: 'edit' }
+      }
+    ]
+  }
 ]
 
 
